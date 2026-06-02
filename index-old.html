@@ -911,32 +911,32 @@ footer{background:var(--navy);padding:4rem 5% 1.5rem}
 <!-- SCRIPTS -->
 <script>
 // ── ABOUT SECTION PHOTO SLIDER ──
-(function() {
-  let currentAboutSlide = 0;
-  const aboutSlides = document.querySelectorAll('.about-slide');
-  const aboutDots = document.querySelectorAll('.about-dot');
-  const totalAboutSlides = aboutSlides.length;
-  let aboutInterval;
+// (function() {
+//   let currentAboutSlide = 0;
+//   const aboutSlides = document.querySelectorAll('.about-slide');
+//   const aboutDots = document.querySelectorAll('.about-dot');
+//   const totalAboutSlides = aboutSlides.length;
+//   let aboutInterval;
 
-  function goToAboutSlide(index) {
-    if (index < 0) index = totalAboutSlides - 1;
-    if (index >= totalAboutSlides) index = 0;
-    currentAboutSlide = index;
-    aboutSlides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-    aboutDots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-  }
+//   function goToAboutSlide(index) {
+//     if (index < 0) index = totalAboutSlides - 1;
+//     if (index >= totalAboutSlides) index = 0;
+//     currentAboutSlide = index;
+//     aboutSlides.forEach((slide, i) => {
+//       slide.classList.toggle('active', i === index);
+//     });
+//     aboutDots.forEach((dot, i) => {
+//       dot.classList.toggle('active', i === index);
+//     });
+//   }
 
-  function nextAboutSlide() {
-    goToAboutSlide(currentAboutSlide + 1);
-  }
+//   function nextAboutSlide() {
+//     goToAboutSlide(currentAboutSlide + 1);
+//   }
 
-  function prevAboutSlide() {
-    goToAboutSlide(currentAboutSlide - 1);
-  }
+//   function prevAboutSlide() {
+//     goToAboutSlide(currentAboutSlide - 1);
+//   }
 
-  function startAboutSlider() {
-    aboutInterval = setInterval(nextAboutSlide%
+//   function startAboutSlider() {
+//     aboutInterval = setInterval(nextAboutSlide), 5000)
