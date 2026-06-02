@@ -1,12 +1,12 @@
-# ---
-# deployment:
-#   tasks:
-#     - export DEPLOYPATH=/home/quellet1/public_html/
-#     - /bin/cp index.html $DEPLOYPATH
-#     - /bin/cp -R images $DEPLOYPATH
-
 ---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/quellet1/public_html/
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
+
+# ---
+# deployment:
+#   tasks:
+#     - export DEPLOYPATH=/home/quellet1/public_html/
+#     - /bin/cp -R * $DEPLOYPATH
