@@ -1,582 +1,677 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Repair Services Nairobi | Appliances, Medical Equipment & IT | Quelle Technologies – 0742 245720</title>
-<meta name="description" content="Professional repair services in Nairobi — water dispensers, fridges, washing machines, microwaves, cookers, laptops, dental chairs, oxygen concentrators, baby incubators, massage chairs, air conditioning & more. Call 0742 245720.">
-<link rel="canonical" href="https://quelletechnologies.co.ke/services">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","name":"Quelle Technologies Limited","telephone":"+254742245720","openingHours":"Mo-Su 00:00-23:59","address":{"@type":"PostalAddress","addressLocality":"Nairobi","addressCountry":"KE"},"areaServed":"Nairobi and nearby areas","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"20"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What appliances do you repair in Nairobi?","acceptedAnswer":{"@type":"Answer","text":"We repair water dispensers, refrigerators, washing machines, microwaves, cookers, blenders, iron boxes, air conditioners, laptops, desktop computers, dental chairs, oxygen concentrators, baby incubators, massage chairs, and all other medical equipment."}},{"@type":"Question","name":"Do you repair medical equipment in Nairobi?","acceptedAnswer":{"@type":"Answer","text":"Yes. We specialise in medical and hospital equipment repair including dental chairs, oxygen concentrators, baby incubators, massage chairs, and other clinical devices across Nairobi."}},{"@type":"Question","name":"Are you available 24 hours?","acceptedAnswer":{"@type":"Answer","text":"Yes. Quelle Technologies Limited is open 24 hours, 7 days a week across Nairobi and nearby areas. Call 0742 245720."}}]}]}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --orange:#e05c1a; --navy:#0b1a38;
-  --ink:#1a1a2e; --muted:#6b7280;
-  --light:#f9fafb; --border:#e5e7eb;
-  --green:#16a34a;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--ink);background:white;font-size:16px;line-height:1.7}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Repair Services Nairobi | Appliances, Medical Equipment & IT | Quelle
+      Technologies – 0742 245720
+    </title>
+    <meta
+      name="description"
+      content="Professional repair services in Nairobi — water dispensers, fridges, washing machines, microwaves, cookers, laptops, dental chairs, oxygen concentrators, baby incubators, massage chairs, air conditioning & more. Call 0742 245720."
+    />
+    <link rel="canonical" href="https://quelletechnologies.co.ke/services" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "name": "Quelle Technologies Limited",
+            "telephone": "+254742245720",
+            "openingHours": "Mo-Su 00:00-23:59",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Nairobi",
+              "addressCountry": "KE"
+            },
+            "areaServed": "Nairobi and nearby areas",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "20"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What appliances do you repair in Nairobi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We repair water dispensers, refrigerators, washing machines, microwaves, cookers, blenders, iron boxes, air conditioners, laptops, desktop computers, dental chairs, oxygen concentrators, baby incubators, massage chairs, and all other medical equipment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you repair medical equipment in Nairobi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We specialise in medical and hospital equipment repair including dental chairs, oxygen concentrators, baby incubators, massage chairs, and other clinical devices across Nairobi."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are you available 24 hours?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Quelle Technologies Limited is open 24 hours, 7 days a week across Nairobi and nearby areas. Call 0742 245720."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Page-specific overrides for Services Page */
+      .crumb {
+        /* background: var(--gray-light); */
+        /* border-bottom: 1px solid var(--border-light); */
+        padding: 0.6rem 5%;
+        font-size: 1rem;
+        color: var(--gray);
+        margin-bottom: 66px;
+        align-items: start;
+      }
+      .crumb a {
+        color: var(--red);
+        text-decoration: none;
+      }
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:white;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:.9rem 5%}
-.nav-logo{font-family:'Lora',serif;font-weight:700;font-size:1rem;text-decoration:none;color:var(--ink)}
-.nav-logo span{color:var(--orange)}
-.nav-call{background:var(--orange);color:white;text-decoration:none;padding:.4rem 1rem;border-radius:5px;font-size:.82rem;font-weight:600}
+      .hero-simple {
+        background: var(--navy);
+        padding: 5rem 5% 4rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        align-items: center;
+        min-height: 50vh;
+      }
+      .hero-simple::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 70% 30%,
+          rgba(220, 38, 38, 0.1),
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .hero-cat {
+        display: inline-block;
+        background: var(--red-subtle);
+        color: var(--red);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.9rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(220, 38, 38, 0.2);
+      }
+      .hero-simple h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        color: white;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      .hero-simple p {
+        color: rgba(255, 255, 255, 0.5);
+        max-width: 650px;
+        margin: 0 auto 2.5rem;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
 
-/* BREADCRUMB */
-.crumb{background:var(--light);border-bottom:1px solid var(--border);padding:.6rem 5%;font-size:.75rem;color:var(--muted);margin-top:57px}
-.crumb a{color:var(--orange);text-decoration:none}
+      .trust-bar {
+        background: var(--red);
+        padding: 0.8rem 5%;
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .trust-bar span {
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
 
-/* PAGE HERO */
-.hero{background:var(--navy);padding:4rem 5%;text-align:center}
-.hero-cat{display:inline-block;background:rgba(224,92,26,.2);color:var(--orange);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .9rem;border-radius:4px;margin-bottom:1rem}
-.hero h1{font-family:'Lora',serif;font-size:clamp(1.8rem,4vw,2.8rem);color:white;margin-bottom:.9rem;line-height:1.25}
-.hero p{color:rgba(255,255,255,.6);max-width:580px;margin:0 auto 2rem;font-size:.97rem}
-.hero-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
-.btn-o{background:var(--orange);color:white;padding:.8rem 1.75rem;border-radius:6px;font-weight:700;text-decoration:none;font-size:.92rem}
-.btn-w{background:white;color:var(--navy);padding:.8rem 1.75rem;border-radius:6px;font-weight:600;text-decoration:none;font-size:.92rem}
-.hero-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin-top:1.75rem}
-.hero-tag{background:rgba(255,255,255,.08);color:rgba(255,255,255,.65);padding:.3rem .85rem;border-radius:100px;font-size:.76rem}
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 5%;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 4rem;
+        align-items: start;
+      }
+      main {
+        min-width: 0;
+      }
 
-/* TRUST BAR */
-.trust{background:var(--orange);padding:.75rem 5%;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
-.trust span{color:white;font-size:.82rem;font-weight:500}
+      .cat-heading {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 3.5rem 0 1.5rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 1px solid var(--border-light);
+      }
+      .cat-icon {
+        font-size: 1.8rem;
+        filter: grayscale(1) brightness(0.2);
+      }
+      .cat-heading h2 {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        color: var(--navy);
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+      .cat-badge {
+        margin-left: auto;
+        background: var(--gray-light);
+        border: 1px solid var(--border-light);
+        border-radius: 4px;
+        padding: 0.25rem 0.75rem;
+        font-size: 0.7rem;
+        color: var(--gray);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
 
-/* MAIN LAYOUT */
-.wrap{max-width:1100px;margin:0 auto;padding:3.5rem 5%;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start}
-main{min-width:0}
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .svc-card {
+        border: 1px solid var(--border-light);
+        border-radius: var(--r-lg);
+        padding: 1.5rem;
+        background: white;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        overflow: hidden;
+      }
+      .svc-card:hover {
+        border-color: var(--red);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(10, 15, 30, 0.08);
+      }
+      .svc-card::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--red);
+        transform: scaleY(0);
+        transition: transform 0.3s;
+        transform-origin: bottom;
+      }
+      .svc-card:hover::after {
+        transform: scaleY(1);
+      }
 
-/* SECTION */
-.sec{margin-bottom:3.5rem}
-.sec-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.4rem}
-.sec h2{font-family:'Lora',serif;font-size:1.55rem;color:var(--ink);margin-bottom:.6rem}
-.sec>p{color:var(--muted);font-size:.95rem;margin-bottom:1.5rem}
+      .svc-icon-box {
+        width: 48px;
+        height: 48px;
+        background: var(--red-light);
+        border-radius: var(--r-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+        transition: all 0.3s;
+      }
+      .svc-card:hover .svc-icon-box {
+        background: var(--red);
+        color: white;
+      }
+      .svc-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+      .svc-card p {
+        font-size: 0.85rem;
+        color: var(--gray);
+        line-height: 1.6;
+      }
 
-/* SERVICE CATEGORY HEADING */
-.cat-heading{display:flex;align-items:center;gap:.75rem;margin:2.5rem 0 1.1rem;padding-bottom:.6rem;border-bottom:2px solid var(--border)}
-.cat-heading .cat-icon{font-size:1.6rem}
-.cat-heading h2{font-family:'Lora',serif;font-size:1.35rem;color:var(--ink);margin:0}
-.cat-heading .cat-badge{margin-left:auto;background:var(--light);border:1px solid var(--border);border-radius:100px;padding:.2rem .75rem;font-size:.72rem;color:var(--muted);font-weight:500}
+      .call-box {
+        background: var(--navy);
+        border-radius: var(--r-xl);
+        padding: 2rem;
+        margin: 3rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        border: 1px solid var(--border-dark);
+      }
+      .call-box strong {
+        color: var(--white);
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+        font-family: var(--font-display);
+        text-transform: uppercase;
+      }
+      .call-box span {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85rem;
+      }
+      .call-box a {
+        background: var(--red);
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem 1.8rem;
+        border-radius: var(--r-sm);
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
 
-/* SERVICE CARDS GRID */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:.5rem}
-.svc-card{border:1px solid var(--border);border-radius:10px;padding:1.25rem;background:white;transition:all .2s;text-decoration:none;display:block}
-.svc-card:hover{border-color:var(--orange);box-shadow:0 4px 16px rgba(224,92,26,.1);transform:translateY(-2px)}
-.svc-icon{font-size:1.8rem;margin-bottom:.6rem;display:block}
-.svc-card h3{font-size:.92rem;font-weight:700;color:var(--ink);margin-bottom:.3rem}
-.svc-card p{font-size:.78rem;color:var(--muted);line-height:1.5}
-.svc-tag{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .55rem;border-radius:3px;margin-top:.6rem}
-.tag-home{background:#fff3ea;color:var(--orange)}
-.tag-med{background:#f0fdf4;color:var(--green)}
-.tag-it{background:#eff6ff;color:#1d4ed8}
-.tag-hvac{background:#f0f9ff;color:#0369a1}
+      aside {
+        position: sticky;
+        top: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .cta-card {
+        background: var(--navy-2);
+        border-radius: var(--r-xl);
+        padding: 1.75rem;
+        border: 1px solid var(--border-dark);
+      }
+      .cta-card h3 {
+        font-family: var(--font-display);
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+      .cta-card p {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+      }
+      .cta-phone {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--red);
+        text-decoration: none;
+        margin-bottom: 1.25rem;
+        font-family: var(--font-display);
+      }
+      .cta-btn {
+        display: block;
+        text-align: center;
+        padding: 0.8rem;
+        border-radius: var(--r-sm);
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .cta-btn-o {
+        background: var(--red);
+        color: white;
+      }
+      .cta-btn-g {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="mainNav">
+      <a href="index.html" class="logo">
+        <img
+          src="images/logoq.png"
+          alt="Quelle Technologies"
+          class="logo-img"
+        />
+        <div class="logo-wordmark">Quelle &nbsp;<span>Technologies</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="tel:0742245720" class="nav-cta">Call Now</a></li>
+      </ul>
+    </nav>
 
-/* INLINE CTA */
-.call-box{background:var(--navy);border-radius:10px;padding:1.5rem 1.75rem;margin:2.5rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.call-box strong{color:white;display:block;font-size:.97rem;margin-bottom:.2rem}
-.call-box span{color:rgba(255,255,255,.5);font-size:.83rem}
-.call-box a{background:var(--orange);color:white;text-decoration:none;padding:.7rem 1.5rem;border-radius:6px;font-weight:700;font-size:.88rem;white-space:nowrap;flex-shrink:0}
-
-/* WHY US */
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1rem}
-.why-item{background:var(--light);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem;display:flex;gap:.75rem;align-items:flex-start}
-.why-em{font-size:1.2rem;flex-shrink:0}
-.why-item strong{display:block;font-size:.88rem;color:var(--ink);margin-bottom:1px}
-.why-item span{font-size:.78rem;color:var(--muted)}
-
-/* FAQ */
-.faq-list{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
-.faq{border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.faq-q{padding:.85rem 1rem;font-weight:600;font-size:.9rem;cursor:pointer;background:var(--light);display:flex;justify-content:space-between;align-items:center;gap:1rem}
-.faq-q:hover{background:#f3f4f6}
-.chev{color:var(--muted);font-size:.75rem;transition:transform .3s;flex-shrink:0}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s,padding .3s}
-.faq-a.open{max-height:200px;padding:.85rem 1rem}
-.faq-a p{font-size:.86rem;color:var(--muted);margin:0}
-
-/* SIDEBAR */
-aside{position:sticky;top:75px;display:flex;flex-direction:column;gap:1.25rem}
-.cta-card{background:var(--navy);border-radius:10px;padding:1.5rem}
-.cta-card h3{font-family:'Lora',serif;color:white;font-size:1.1rem;margin-bottom:.35rem}
-.cta-card p{color:rgba(255,255,255,.5);font-size:.8rem;margin-bottom:1rem}
-.cta-phone{display:block;font-size:1.5rem;font-weight:700;color:var(--orange);text-decoration:none;margin-bottom:1rem}
-.cta-btn{display:block;text-align:center;padding:.7rem;border-radius:6px;font-weight:600;font-size:.85rem;text-decoration:none;margin-bottom:.45rem}
-.cta-btn-o{background:var(--orange);color:white}
-.cta-btn-g{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.65)}
-.open-tag{display:flex;align-items:center;gap:.45rem;font-size:.75rem;color:rgba(255,255,255,.45);margin-top:.9rem;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.1)}
-.odot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:blink 2s infinite;flex-shrink:0}
-.rating-card{border:1px solid var(--border);border-radius:10px;padding:1.1rem;text-align:center}
-.rating-stars{color:#f59e0b;font-size:1.1rem;letter-spacing:2px}
-.rating-card strong{display:block;font-size:1.4rem;color:var(--ink)}
-.rating-card span{font-size:.75rem;color:var(--muted)}
-.side-nav{border:1px solid var(--border);border-radius:10px;padding:1.25rem}
-.side-nav h4{font-size:.82rem;font-weight:700;margin-bottom:.85rem;color:var(--ink)}
-.side-nav ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:.35rem}
-.side-nav a{display:flex;align-items:center;gap:.5rem;text-decoration:none;font-size:.82rem;color:var(--ink);padding:.3rem 0;border-bottom:1px solid var(--border);transition:color .2s}
-.side-nav a:hover{color:var(--orange)}
-.side-nav ul li:last-child a{border-bottom:none}
-.arr{margin-left:auto;color:var(--muted);font-size:.7rem}
-
-/* FOOTER CTA */
-.footer-cta{background:var(--orange);padding:2.5rem 5%;text-align:center}
-.footer-cta h2{font-family:'Lora',serif;color:white;font-size:1.6rem;margin-bottom:.5rem}
-.footer-cta p{color:rgba(255,255,255,.75);margin-bottom:1.25rem;font-size:.93rem}
-.footer-cta-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
-.btn-white{background:white;color:var(--orange);padding:.75rem 1.75rem;border-radius:6px;font-weight:700;text-decoration:none;font-size:.92rem}
-.btn-clear{border:2px solid rgba(255,255,255,.5);color:white;padding:.75rem 1.75rem;border-radius:6px;font-weight:600;text-decoration:none;font-size:.92rem}
-
-/* FOOTER */
-footer{background:#07101f;padding:2.5rem 5% 1.5rem}
-.footer-cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2rem;margin-bottom:1.5rem}
-.footer-brand strong{color:white;font-size:.9rem}
-.footer-brand p{font-size:.78rem;color:rgba(255,255,255,.3);margin-top:.4rem;max-width:210px}
-.fc h5{color:rgba(255,255,255,.55);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.7rem}
-.fc ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
-.fc a{color:rgba(255,255,255,.3);text-decoration:none;font-size:.78rem;transition:color .2s}
-.fc a:hover{color:var(--orange)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
-.footer-bottom span{font-size:.72rem;color:rgba(255,255,255,.2)}
-
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-
-@media(max-width:900px){.wrap{grid-template-columns:1fr}aside{position:static}.footer-cols{grid-template-columns:1fr 1fr}.services-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.services-grid{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr}.footer-cols{grid-template-columns:1fr}.call-box{flex-direction:column}}
-@media(max-width:400px){.services-grid{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">Quelle <span>Technologies</span></a>
-  <a href="tel:0742245720" class="nav-call">📞 0742 245720</a>
-</nav>
-
-<!-- BREADCRUMB -->
-<div class="crumb">
-  <a href="index.html">Home</a> › Our Services
-</div>
-
-<!-- HERO -->
-<header class="hero">
-  <span class="hero-cat">Nairobi · Open 24 Hours</span>
-  <h1>Professional Repair Services<br>in Nairobi</h1>
-  <p>Home appliances, IT equipment, medical devices, and air conditioning — all repaired by trained technicians. Available 24 hours across Nairobi and nearby areas.</p>
-  <div class="hero-btns">
-    <a href="tel:0742245720" class="btn-o">📞 Call 0742 245720</a>
-    <a href="https://wa.me/254742245720" class="btn-w">💬 WhatsApp Us</a>
-  </div>
-  <div class="hero-tags">
-    <span class="hero-tag">✓ Same-day service</span>
-    <span class="hero-tag">✓ All brands</span>
-    <span class="hero-tag">✓ Open 24 hours</span>
-    <span class="hero-tag">✓ 4.9★ Google rated</span>
-    <span class="hero-tag">✓ Honest pricing</span>
-  </div>
-</header>
-
-<!-- TRUST BAR -->
-<div class="trust">
-  <span>📞 0742 245720</span>
-  <span>⭐ 4.9 / 5 — 20 Google Reviews</span>
-  <span>🕐 Open 24 Hours, 7 Days</span>
-  <span>📍 Nairobi &amp; Nearby Areas</span>
-</div>
-
-<!-- MAIN -->
-<div class="wrap">
-<main>
-
-  <!-- INTRO -->
-  <section class="sec">
-    <div class="sec-label">All Repair Services</div>
-    <h2>Everything We Fix in Nairobi</h2>
-    <p>Quelle Technologies Limited is Nairobi's trusted multi-service repair company. From a broken blender to a hospital baby incubator — our certified technicians fix it right, fast.</p>
-  </section>
-
-  <!-- ══ HOME APPLIANCES ══ -->
-  <div class="cat-heading">
-    <span class="cat-icon">🏠</span>
-    <h2>Home &amp; Kitchen Appliances</h2>
-    <span class="cat-badge">Household</span>
-  </div>
-
-  <div class="services-grid">
-    <a href="water-dispenser-repair-nairobi.html" class="svc-card">
-      <span class="svc-icon">💧</span>
-      <h3>Water Dispenser Repair</h3>
-      <p>Top load, bottom load, countertop. Not cooling, leaking, no hot water — all faults fixed.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🧊</span>
-      <h3>Refrigerator Repair</h3>
-      <p>Single door, double door, side-by-side. Not cooling, compressor faults, ice maker issues.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🫧</span>
-      <h3>Washing Machine Repair</h3>
-      <p>Top load &amp; front load. Not spinning, not draining, leaking, drum faults.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">📡</span>
-      <h3>Microwave Repair</h3>
-      <p>Not heating, turntable not spinning, door faults, sparking inside, display issues.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🍳</span>
-      <h3>Cooker &amp; Oven Repair</h3>
-      <p>Gas &amp; electric cookers, ovens, hobs. Burner faults, ignition issues, oven not heating.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🧃</span>
-      <h3>Blender &amp; Juicer Repair</h3>
-      <p>Motor not running, blade faults, burnt smell, speed control issues. All brands.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">👕</span>
-      <h3>Iron Box Repair</h3>
-      <p>Not heating, steam not working, thermostat faults, cord issues. All types repaired.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🍽️</span>
-      <h3>Dishwasher Repair</h3>
-      <p>Not draining, not cleaning, door latch faults, water inlet issues.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🌡️</span>
-      <h3>Water Heater / Geyser Repair</h3>
-      <p>No hot water, thermostat faults, heating element failure, leaking tank.</p>
-      <span class="svc-tag tag-home">Home</span>
-    </a>
-  </div>
-
-  <div class="call-box">
-    <div>
-      <strong>Home appliance not working?</strong>
-      <span>We carry spare parts on every call — same-day repair available across Nairobi.</span>
-    </div>
-    <a href="tel:0742245720">📞 0742 245720</a>
-  </div>
-
-  <!-- ══ AIR CONDITIONING ══ -->
-  <div class="cat-heading">
-    <span class="cat-icon">❄️</span>
-    <h2>Air Conditioning Services</h2>
-    <span class="cat-badge">HVAC</span>
-  </div>
-
-  <div class="services-grid">
-    <a href="#" class="svc-card">
-      <span class="svc-icon">❄️</span>
-      <h3>AC Installation</h3>
-      <p>Split units, cassette ACs, window units. Professional installation for homes &amp; offices.</p>
-      <span class="svc-tag tag-hvac">HVAC</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🔧</span>
-      <h3>AC Repair</h3>
-      <p>Not cooling, not heating, leaking water, noisy operation, remote control faults.</p>
-      <span class="svc-tag tag-hvac">HVAC</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🧹</span>
-      <h3>AC Servicing &amp; Cleaning</h3>
-      <p>Deep cleaning, filter replacement, gas recharge, condenser coil cleaning.</p>
-      <span class="svc-tag tag-hvac">HVAC</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">📋</span>
-      <h3>AC Maintenance Contracts</h3>
-      <p>Scheduled servicing for offices, hotels, schools &amp; hospitals across Nairobi.</p>
-      <span class="svc-tag tag-hvac">HVAC</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🏭</span>
-      <h3>Commercial AC Repair</h3>
-      <p>Central AC, VRF systems, commercial split units for large buildings.</p>
-      <span class="svc-tag tag-hvac">HVAC</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">💨</span>
-      <h3>Gas Recharge (Regassing)</h3>
-      <p>Refrigerant top-up for ACs and refrigerators that have lost cooling capacity.</p>
-      <span class="svc-tag tag-hvac">HVAC</span>
-    </a>
-  </div>
-
-  <!-- ══ IT & COMPUTERS ══ -->
-  <div class="cat-heading">
-    <span class="cat-icon">💻</span>
-    <h2>Computers &amp; IT Equipment</h2>
-    <span class="cat-badge">IT</span>
-  </div>
-
-  <div class="services-grid">
-    <a href="#" class="svc-card">
-      <span class="svc-icon">💻</span>
-      <h3>Laptop Repair</h3>
-      <p>Screen replacement, motherboard faults, overheating, keyboard, charging issues. All brands.</p>
-      <span class="svc-tag tag-it">IT</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🖥️</span>
-      <h3>Desktop Computer Repair</h3>
-      <p>Power supply faults, RAM issues, hard drive failure, virus removal, slow performance.</p>
-      <span class="svc-tag tag-it">IT</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🖨️</span>
-      <h3>Printer Repair</h3>
-      <p>Paper jams, not printing, ink head cleaning, roller replacement. All makes serviced.</p>
-      <span class="svc-tag tag-it">IT</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🌐</span>
-      <h3>Network &amp; WiFi Setup</h3>
-      <p>Router configuration, LAN installation, network troubleshooting for homes &amp; offices.</p>
-      <span class="svc-tag tag-it">IT</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">📷</span>
-      <h3>CCTV Installation &amp; Repair</h3>
-      <p>Security camera installation, DVR/NVR setup, camera repair across Nairobi.</p>
-      <span class="svc-tag tag-it">IT</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">💾</span>
-      <h3>Data Recovery</h3>
-      <p>Recover lost data from hard drives, flash disks, and formatted storage devices.</p>
-      <span class="svc-tag tag-it">IT</span>
-    </a>
-  </div>
-
-  <div class="call-box">
-    <div>
-      <strong>Computer or network problem?</strong>
-      <span>On-site IT support available same day across Nairobi.</span>
-    </div>
-    <a href="tel:0742245720">📞 0742 245720</a>
-  </div>
-
-  <!-- ══ MEDICAL EQUIPMENT ══ -->
-  <div class="cat-heading">
-    <span class="cat-icon">🏥</span>
-    <h2>Medical &amp; Hospital Equipment Repair</h2>
-    <span class="cat-badge">Medical</span>
-  </div>
-
-  <p style="color:var(--muted);font-size:.93rem;margin-bottom:1.5rem">We specialise in the repair and maintenance of clinical and hospital equipment across Nairobi. Our medical engineering team services clinics, hospitals, physiotherapy centres, and dental practices.</p>
-
-  <div class="services-grid">
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🦷</span>
-      <h3>Dental Chair Repair</h3>
-      <p>Hydraulic faults, motor issues, light failures, water system problems. All brands.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🫁</span>
-      <h3>Oxygen Concentrator Repair</h3>
-      <p>Low oxygen output, alarm faults, compressor issues, flow meter problems.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">👶</span>
-      <h3>Baby Incubator Repair</h3>
-      <p>Temperature control faults, humidity sensor issues, alarm systems, heating element repair.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">💆</span>
-      <h3>Massage Chair Repair</h3>
-      <p>Motor faults, massage mechanism, remote control, heating element, recliner issues.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">❤️</span>
-      <h3>Patient Monitor Repair</h3>
-      <p>ECG faults, display issues, sensor calibration, battery replacement, alarm faults.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">💉</span>
-      <h3>Infusion Pump Repair</h3>
-      <p>Motor faults, alarm errors, calibration, sensor and control board repair.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🔬</span>
-      <h3>Laboratory Equipment</h3>
-      <p>Centrifuges, autoclaves, microscopes, lab fridges. Repair and calibration services.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🩺</span>
-      <h3>Ultrasound Machine Repair</h3>
-      <p>Probe faults, display issues, image quality problems, transducer repair.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🛏️</span>
-      <h3>Hospital Bed Repair</h3>
-      <p>Electric bed motors, hydraulic faults, control panel, side rail issues.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🌡️</span>
-      <h3>Sterilizer / Autoclave Repair</h3>
-      <p>Pressure faults, heating element, door seal, timer and cycle control issues.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🫀</span>
-      <h3>ECG Machine Repair</h3>
-      <p>Lead faults, printing issues, calibration, display and battery problems.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-    <a href="#" class="svc-card">
-      <span class="svc-icon">🔧</span>
-      <h3>Other Medical Equipment</h3>
-      <p>Physiotherapy equipment, nebulizers, suction machines, and any other clinical devices.</p>
-      <span class="svc-tag tag-med">Medical</span>
-    </a>
-  </div>
-
-  <div class="call-box">
-    <div>
-      <strong>Medical equipment fault?</strong>
-      <span>Our medical engineering team is available 24 hours for urgent hospital repairs.</span>
-    </div>
-    <a href="tel:0742245720">📞 0742 245720</a>
-  </div>
-
-  <!-- WHY US -->
-  <section class="sec" style="margin-top:1rem">
-    <div class="sec-label">Why Choose Us</div>
-    <h2>Why Nairobi Chooses Quelle Technologies</h2>
-    <div class="why-grid">
-      <div class="why-item"><div class="why-em">🕐</div><div><strong>Open 24 Hours, 7 Days</strong><span>Call any time — day or night, weekday or weekend.</span></div></div>
-      <div class="why-item"><div class="why-em">🔧</div><div><strong>Parts on Every Call</strong><span>We carry the most common spare parts on every visit — fewer return trips.</span></div></div>
-      <div class="why-item"><div class="why-em">💰</div><div><strong>Honest Pricing</strong><span>Clear quote before we start. No hidden charges, ever.</span></div></div>
-      <div class="why-item"><div class="why-em">⭐</div><div><strong>4.9 / 5 on Google</strong><span>20 verified reviews from real clients across Nairobi.</span></div></div>
-      <div class="why-item"><div class="why-em">🏥</div><div><strong>Medical Engineering Team</strong><span>Certified technicians for clinical and hospital equipment.</span></div></div>
-      <div class="why-item"><div class="why-em">📋</div><div><strong>Maintenance Contracts</strong><span>Monthly &amp; quarterly plans for offices, hotels, clinics, and schools.</span></div></div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="sec">
-    <div class="sec-label">FAQ</div>
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-list">
-      <div class="faq">
-        <div class="faq-q" onclick="faq(this)">What appliances do you repair in Nairobi? <span class="chev">▼</span></div>
-        <div class="faq-a"><p>Water dispensers, refrigerators, washing machines, microwaves, cookers, blenders, iron boxes, air conditioners, laptops, desktops, dental chairs, oxygen concentrators, baby incubators, massage chairs, patient monitors, and all other medical equipment.</p></div>
+    <header class="hero-simple">
+      <div class="crumb">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; Our Services
       </div>
-      <div class="faq">
-        <div class="faq-q" onclick="faq(this)">Do you repair medical equipment in Nairobi? <span class="chev">▼</span></div>
-        <div class="faq-a"><p>Yes. We have a dedicated medical engineering team for clinical and hospital equipment — dental chairs, oxygen concentrators, baby incubators, patient monitors, ECG machines, autoclaves, lab equipment, and more.</p></div>
+      <!-- <span class="hero-cat">Nairobi · Open 24 Hours</span> -->
+      <h1>Professional Repair Services<br />in Nairobi</h1>
+      <p>
+        Home appliances, IT equipment, medical devices, and air conditioning —
+        all repaired by trained technicians. Available 24 hours across Nairobi
+        and nearby areas.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:0742245720" class="btn-call">Call 0742 245720</a>
+        <a href="https://wa.me/254742245720" class="btn-ghost">WhatsApp Us</a>
       </div>
-      <div class="faq">
-        <div class="faq-q" onclick="faq(this)">Are you available 24 hours? <span class="chev">▼</span></div>
-        <div class="faq-a"><p>Yes. Quelle Technologies Limited is open 24 hours, 7 days a week across Nairobi and nearby areas. Call <a href="tel:0742245720">0742 245720</a> anytime.</p></div>
-      </div>
-      <div class="faq">
-        <div class="faq-q" onclick="faq(this)">How much does a repair cost? <span class="chev">▼</span></div>
-        <div class="faq-a"><p>We always give a clear, honest quote before any work begins — no hidden charges. Call <a href="tel:0742245720">0742 245720</a> for a free phone diagnosis first.</p></div>
-      </div>
-      <div class="faq">
-        <div class="faq-q" onclick="faq(this)">Do you offer maintenance contracts for businesses? <span class="chev">▼</span></div>
-        <div class="faq-a"><p>Yes. Monthly and quarterly contracts for offices, hotels, hospitals, schools, and apartment blocks. Covers all appliances, IT equipment, and medical devices. Call <a href="tel:0742245720">0742 245720</a> to discuss.</p></div>
-      </div>
+    </header>
+
+    <div class="trust-bar">
+      <span>✓ Same-day service</span>
+      <span>✓ All brands</span>
+      <span>✓ Open 24/7</span>
+      <span>✓ 4.9★ Google Rated</span>
     </div>
-  </section>
 
-</main>
+    <div class="wrap">
+      <main>
+        <section>
+          <div class="hero-badge">All Repair Services</div>
+          <h2
+            style="
+              font-family: var(--font-display);
+              font-size: 2rem;
+              font-weight: 800;
+              color: var(--navy);
+              margin-bottom: 1rem;
+              text-transform: uppercase;
+            "
+          >
+            Everything We Fix in Nairobi
+          </h2>
+          <p
+            style="
+              color: var(--gray);
+              font-size: 1rem;
+              line-height: 1.7;
+              margin-bottom: 2rem;
+            "
+          >
+            Quelle Technologies Limited is Nairobi's trusted multi-service
+            repair company. From a broken blender to a hospital baby incubator —
+            our certified technicians fix it right, fast.
+          </p>
+        </section>
 
-<!-- SIDEBAR -->
-<aside>
-  <div class="cta-card">
-    <h3>Book a Repair</h3>
-    <p>Available 24 hours. Nairobi &amp; nearby areas.</p>
-    <a href="tel:0742245720" class="cta-phone">0742 245720</a>
-    <a href="tel:0742245720" class="cta-btn cta-btn-o">📞 Call Now</a>
-    <a href="https://wa.me/254742245720" class="cta-btn cta-btn-g">💬 WhatsApp Us</a>
-    <div class="open-tag"><div class="odot"></div>Open now — 24 hours / 7 days</div>
-  </div>
+        <!-- HOME APPLIANCES -->
+        <div class="cat-heading">
+          <!-- <span class="cat-icon">🏠</span> -->
+          <h2>Home & Kitchen Appliances</h2>
+          <span class="cat-badge">Household</span>
+        </div>
 
-  <div class="rating-card">
-    <div class="rating-stars">★★★★★</div>
-    <strong>4.9 / 5</strong>
-    <span>20 Google Reviews</span>
-  </div>
+        <div class="services-grid">
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">💧</div> -->
+            <h3>Water Dispenser</h3>
+            <p>
+              Top load, bottom load, countertop. Not cooling, leaking, no hot
+              water — all faults fixed.
+            </p>
+            <span class="svc-arrow">→</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">🍽️</div> -->
+            <h3>Dishwasher</h3>
+            <p>
+              All brands repaired. Not draining, not cleaning, door latch,
+              leaking — same day service.
+            </p>
+            <span class="svc-arrow">→</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">🧊</div> -->
+            <h3>Refrigerator</h3>
+            <p>
+              Single door, double door, side-by-side. Not cooling, compressor
+              faults, ice maker issues.
+            </p>
+            <span class="svc-arrow">→</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">🫧</div> -->
+            <h3>Washing Machine</h3>
+            <p>
+              Top load & front load. Not spinning, not draining, leaking, drum
+              faults.
+            </p>
+            <span class="svc-arrow">→</span>
+          </a>
 
-  <div class="side-nav">
-    <h4>Service Categories</h4>
-    <ul>
-      <li><a href="#" onclick="document.querySelector('.cat-heading').scrollIntoView()">🏠 Home Appliances <span class="arr">›</span></a></li>
-      <li><a href="#">❄️ Air Conditioning <span class="arr">›</span></a></li>
-      <li><a href="#">💻 Computers &amp; IT <span class="arr">›</span></a></li>
-      <li><a href="#">🏥 Medical Equipment <span class="arr">›</span></a></li>
-    </ul>
-  </div>
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">📡</div> -->
+            <h3>Microwave Repair</h3>
+            <p>
+              Not heating, turntable not spinning, sparking inside, display
+              issues. All brands.
+            </p>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">🍳</div> -->
+            <h3>Cooker & Oven</h3>
+            <p>
+              Gas & electric cookers, ovens, hobs. Burner faults, ignition
+              issues, oven not heating.
+            </p>
+            <span class="svc-arrow">→</span>
+          </a>
+        </div>
 
-  <div class="side-nav">
-    <h4>📍 Areas We Serve</h4>
-    <ul>
-      <li><a href="#">Westlands <span class="arr">›</span></a></li>
-      <li><a href="#">Kilimani &amp; Lavington <span class="arr">›</span></a></li>
-      <li><a href="#">Karen &amp; Langata <span class="arr">›</span></a></li>
-      <li><a href="#">Eastleigh &amp; Umoja <span class="arr">›</span></a></li>
-      <li><a href="#">Kasarani &amp; Thika Road <span class="arr">›</span></a></li>
-      <li><a href="#">South B, South C &amp; Nearby <span class="arr">›</span></a></li>
-    </ul>
-  </div>
-</aside>
-</div>
+        <!-- MEDICAL EQUIPMENT -->
+        <div class="cat-heading">
+          <!-- <span class="cat-icon">🏥</span> -->
+          <h2>Medical & Hospital Equipment</h2>
+          <span class="cat-badge">Specialized</span>
+        </div>
 
-<!-- FOOTER CTA -->
-<div class="footer-cta">
-  <h2>Need a Repair Today?</h2>
-  <p>Available 24 hours. All appliances. All brands. Nairobi &amp; nearby areas.</p>
-  <div class="footer-cta-btns">
-    <a href="tel:0742245720" class="btn-white">📞 0742 245720</a>
-    <a href="https://wa.me/254742245720" class="btn-clear">💬 WhatsApp</a>
-  </div>
-</div>
+        <div class="services-grid">
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">🦷</div> -->
+            <h3>Dental Chairs</h3>
+            <p>
+              Hydraulic & electric faults, upholstery, suction issues, and
+              control board repairs.
+            </p>
+            <span class="svc-arrow">→</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">🌬️</div> -->
+            <h3>Oxygen Concentrators</h3>
+            <p>
+              Purity issues, compressor repair, sieve bed replacement, and
+              filter maintenance.
+            </p>
+            <span class="svc-arrow">→</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <div class="svc-icon-box">👶</div> -->
+            <h3>Baby Incubators</h3>
+            <p>
+              Temperature control, humidity sensors, and electrical safety
+              calibration.
+            </p>
+            <span class="svc-arrow">→</span>
+          </a>
+        </div>
 
-<footer>
-  <div class="footer-cols">
-    <div class="footer-brand"><strong>Quelle Technologies Limited</strong><p>Appliance repair, IT solutions, digital marketing &amp; medical engineering in Nairobi, Kenya.</p></div>
-    <div class="fc"><h5>Home Repairs</h5><ul><li><a href="water-dispenser-repair-nairobi.html">Water Dispenser Repair</a></li><li><a href="#">Refrigerator Repair</a></li><li><a href="#">Washing Machine</a></li><li><a href="#">Microwave Repair</a></li><li><a href="#">Cooker &amp; Oven</a></li></ul></div>
-    <div class="fc"><h5>Medical &amp; IT</h5><ul><li><a href="#">Dental Chair Repair</a></li><li><a href="#">Oxygen Concentrator</a></li><li><a href="#">Baby Incubator</a></li><li><a href="#">Laptop &amp; Desktop</a></li><li><a href="#">Air Conditioning</a></li></ul></div>
-    <div class="fc"><h5>Contact</h5><ul><li><a href="tel:0742245720">📞 0742 245720</a></li><li><a href="https://wa.me/254742245720">💬 WhatsApp</a></li><li><a href="https://instagram.com/quelletechnologiesltd">📸 @quelletechnologiesltd</a></li><li><a href="#">📍 Nairobi, Kenya</a></li></ul></div>
-  </div>
-  <div class="footer-bottom">
-    <span>Quelle Technologies Limited</span>
-    <span>© 2025 Quelle Technologies Limited. All rights reserved.</span>
-  </div>
-</footer>
+        <div class="call-box">
+          <div>
+            <strong>Need a Technician?</strong>
+            <span>Available 24/7 across Nairobi and suburbs.</span>
+          </div>
+          <a href="tel:0742245720">Call 0742 245720</a>
+        </div>
+      </main>
 
-<script>
-function faq(q){
-  const a=q.nextElementSibling,c=q.querySelector('.chev'),open=a.classList.contains('open');
-  document.querySelectorAll('.faq-a.open').forEach(x=>{x.classList.remove('open');x.previousElementSibling.querySelector('.chev').style.transform='rotate(0)'});
-  if(!open){a.classList.add('open');c.style.transform='rotate(180deg)'}
-}
-window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=scrollY>30?'0 2px 10px rgba(0,0,0,.07)':'none'});
-</script>
-</body>
+      <aside>
+        <div class="cta-card">
+          <h3>Quick Booking</h3>
+          <p>Request a technician to visit your location today.</p>
+          <a href="tel:0742245720" class="cta-phone">0742 245720</a>
+          <a href="https://wa.me/254742245720" class="cta-btn cta-btn-o"
+            >WhatsApp Us</a
+          >
+          <a href="index.html#contact-form" class="cta-btn cta-btn-g"
+            >Book Online</a
+          >
+        </div>
+
+        <div class="side-nav">
+          <h4>Our Core Services</h4>
+          <ul class="ulstyle">
+            <li>
+              <a href="index.html#services" class="btn-ghost-l"
+                >Appliance Repair <span class="arr">→</span></a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="btn-ghost-l"
+                >IT Solutions <span class="arr">→</span></a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="btn-ghost-l"
+                >Medical Engineering <span class="arr">→</span></a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="btn-ghost-l"
+                >Digital Marketing <span class="arr">→</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="fn">Quelle <span>Technologies</span> Ltd</div>
+          <p>
+            IT solutions, digital marketing, and medical engineering.
+            Professional appliance repair & maintenance in Nairobi, Kenya.
+          </p>
+          <div class="footer-contacts">
+            <a href="tel:0742245720"
+              ><image src="images/call1.png" alt="Call"></image> 0742 245720</a
+            >
+            <a href="#"
+              ><image src="images/open1.png" alt="Hours"></image> Open 24
+              Hours</a
+            >
+            <a href="#"
+              ><image src="images/location.png" alt="Map"></image> Nairobi &
+              Nearby Areas</a
+            >
+            <a
+              href="https://www.instagram.com/quelletechnologiesltd"
+              target="_blank"
+              rel="noopener"
+              ><image
+                src="images/instagram.png"
+                alt="Instagram"
+                style="width: 27px; height: 27px"
+              ></image>
+              @quelletechnologiesltd</a
+            >
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Repair Services</h5>
+          <ul class="footer-links">
+            <li><a href="#services">Refrigerator Repair</a></li>
+            <li><a href="#services">Water Dispenser</a></li>
+            <li><a href="#services">Washing Machine</a></li>
+            <li><a href="#services">Microwave & Oven</a></li>
+            <li><a href="#services">Air Conditioning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Tech Services</h5>
+          <ul class="footer-links">
+            <li><a href="#services">IT Solutions</a></li>
+            <li><a href="#services">Medical Equipment</a></li>
+            <li><a href="#services">Digital Marketing</a></li>
+            <li><a href="#services">Website Development</a></li>
+            <li><a href="#services">SEO Services</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Areas Served</h5>
+          <ul class="footer-links">
+            <li><a href="#contact">Westlands</a></li>
+            <li><a href="#contact">Kilimani</a></li>
+            <li><a href="#contact">Karen</a></li>
+            <li><a href="#contact">Eastleigh</a></li>
+            <li><a href="#contact">Kasarani & Nearby</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="fbc">Quelle Technologies Limited</span>
+        <span class="fbc">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          · Nairobi, Kenya · All rights reserved.
+        </span>
+      </div>
+    </footer>
+    <script>
+      const nav = document.getElementById("mainNav");
+      function updateNav() {
+        nav.classList.toggle("scrolled", window.scrollY > 40);
+      }
+      window.addEventListener("scroll", updateNav, { passive: true });
+      updateNav();
+    </script>
+  </body>
 </html>
