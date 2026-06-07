@@ -363,6 +363,160 @@
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: rgba(255, 255, 255, 0.7);
       }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .why-item {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        border-radius: var(--r-lg);
+        padding: 2rem;
+        display: flex;
+        gap: 1.25rem;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+      }
+      .why-item:hover {
+        border-color: var(--red);
+        background: var(--red-subtle);
+        transform: translateX(5px);
+      }
+      .why-item strong {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+      .why-item span {
+        font-size: 0.9rem;
+        color: var(--gray);
+        line-height: 1.6;
+      }
+
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .faq {
+        border: 1px solid var(--border-light);
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        background: var(--white);
+        transition: all 0.3s ease;
+      }
+      .faq:hover {
+        border-color: var(--red);
+      }
+      .faq-q {
+        padding: 1.5rem 2rem;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 1.05rem;
+        cursor: pointer;
+        background: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        color: var(--navy);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+      }
+      .faq-q:hover {
+        color: var(--red);
+      }
+      .chev {
+        color: var(--gray-2);
+        font-size: 0.8rem;
+        transition: transform 0.4s;
+      }
+      .faq.active .chev {
+        transform: rotate(180deg);
+        color: var(--red);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          padding 0.4s;
+        background: var(--gray-light);
+      }
+      .faq.active .faq-a {
+        max-height: 300px;
+        padding: 1.5rem 2rem;
+        border-top: 1px solid var(--border-light);
+      }
+      .faq-a p {
+        font-size: 0.95rem;
+        color: var(--navy);
+        margin: 0;
+        line-height: 1.8;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 1024px) {
+        .wrap {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+        }
+        aside {
+          position: static;
+        }
+        .hero-simple {
+          padding: 10rem 5% 6rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-simple h1 {
+          font-size: 2.5rem;
+        }
+        .trust-bar {
+          gap: 1.5rem;
+          justify-content: flex-start;
+          padding: 1.25rem 5%;
+        }
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        .call-box {
+          text-align: center;
+          justify-content: center;
+          padding: 2.5rem 1.5rem;
+        }
+        .call-box div {
+          margin-bottom: 1rem;
+        }
+        .cat-heading h2 {
+          font-size: 1.3rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-simple h1 {
+          font-size: 2rem;
+        }
+        .hero-simple p {
+          font-size: 1rem;
+        }
+        .trust-bar span {
+          font-size: 0.75rem;
+        }
+        .faq-q {
+          padding: 1.25rem 1.5rem;
+          font-size: 0.95rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -401,6 +555,7 @@
       </div>
     </header>
 
+    <!-- TRUST BAR -->
     <div class="trust-bar">
       <span>✓ Same-day service</span>
       <span>✓ All brands</span>
@@ -408,188 +563,714 @@
       <span>✓ 4.9★ Google Rated</span>
     </div>
 
+    <!-- MAIN -->
     <div class="wrap">
       <main>
-        <section>
-          <div class="hero-badge">All Repair Services</div>
-          <h2
-            style="
-              font-family: var(--font-display);
-              font-size: 2rem;
-              font-weight: 800;
-              color: var(--navy);
-              margin-bottom: 1rem;
-              text-transform: uppercase;
-            "
-          >
-            Everything We Fix in Nairobi
-          </h2>
-          <p
-            style="
-              color: var(--gray);
-              font-size: 1rem;
-              line-height: 1.7;
-              margin-bottom: 2rem;
-            "
-          >
+        <!-- INTRO -->
+        <section class="sec">
+          <div class="sec-label">All Repair Services</div>
+          <h2>Everything We Fix in Nairobi</h2>
+          <p>
             Quelle Technologies Limited is Nairobi's trusted multi-service
             repair company. From a broken blender to a hospital baby incubator —
             our certified technicians fix it right, fast.
           </p>
         </section>
 
-        <!-- HOME APPLIANCES -->
+        <!-- ══ HOME APPLIANCES ══ -->
         <div class="cat-heading">
           <!-- <span class="cat-icon">🏠</span> -->
-          <h2>Home & Kitchen Appliances</h2>
+          <h2>Home &amp; Kitchen Appliances</h2>
           <span class="cat-badge">Household</span>
         </div>
 
         <div class="services-grid">
-          <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">💧</div> -->
-            <h3>Water Dispenser</h3>
+          <a href="water-dispenser-repair-nairobi.html" class="svc-card">
+            <!-- <span class="svc-icon">💧</span> -->
+            <h3>Water Dispenser Repair</h3>
             <p>
               Top load, bottom load, countertop. Not cooling, leaking, no hot
               water — all faults fixed.
             </p>
-            <span class="svc-arrow">→</span>
+            <span class="svc-tag tag-home">Home</span>
           </a>
           <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">🍽️</div> -->
-            <h3>Dishwasher</h3>
-            <p>
-              All brands repaired. Not draining, not cleaning, door latch,
-              leaking — same day service.
-            </p>
-            <span class="svc-arrow">→</span>
-          </a>
-          <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">🧊</div> -->
-            <h3>Refrigerator</h3>
+            <!-- <span class="svc-icon">🧊</span> -->
+            <h3>Refrigerator Repair</h3>
             <p>
               Single door, double door, side-by-side. Not cooling, compressor
               faults, ice maker issues.
             </p>
-            <span class="svc-arrow">→</span>
+            <span class="svc-tag tag-home">Home</span>
           </a>
           <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">🫧</div> -->
-            <h3>Washing Machine</h3>
+            <!-- <span class="svc-icon">🫧</span> -->
+            <h3>Washing Machine Repair</h3>
             <p>
-              Top load & front load. Not spinning, not draining, leaking, drum
-              faults.
+              Top load &amp; front load. Not spinning, not draining, leaking,
+              drum faults.
             </p>
-            <span class="svc-arrow">→</span>
+            <span class="svc-tag tag-home">Home</span>
           </a>
-
           <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">📡</div> -->
+            <!-- <span class="svc-icon">📡</span> -->
             <h3>Microwave Repair</h3>
             <p>
-              Not heating, turntable not spinning, sparking inside, display
-              issues. All brands.
+              Not heating, turntable not spinning, door faults, sparking inside,
+              display issues.
             </p>
+            <span class="svc-tag tag-home">Home</span>
           </a>
           <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">🍳</div> -->
-            <h3>Cooker & Oven</h3>
+            <!-- <span class="svc-icon">🍳</span> -->
+            <h3>Cooker &amp; Oven Repair</h3>
             <p>
-              Gas & electric cookers, ovens, hobs. Burner faults, ignition
+              Gas &amp; electric cookers, ovens, hobs. Burner faults, ignition
               issues, oven not heating.
             </p>
-            <span class="svc-arrow">→</span>
-          </a>
-        </div>
-
-        <!-- MEDICAL EQUIPMENT -->
-        <div class="cat-heading">
-          <!-- <span class="cat-icon">🏥</span> -->
-          <h2>Medical & Hospital Equipment</h2>
-          <span class="cat-badge">Specialized</span>
-        </div>
-
-        <div class="services-grid">
-          <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">🦷</div> -->
-            <h3>Dental Chairs</h3>
-            <p>
-              Hydraulic & electric faults, upholstery, suction issues, and
-              control board repairs.
-            </p>
-            <span class="svc-arrow">→</span>
+            <span class="svc-tag tag-home">Home</span>
           </a>
           <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">🌬️</div> -->
-            <h3>Oxygen Concentrators</h3>
+            <!-- <span class="svc-icon">🧃</span> -->
+            <h3>Blender &amp; Juicer Repair</h3>
             <p>
-              Purity issues, compressor repair, sieve bed replacement, and
-              filter maintenance.
+              Motor not running, blade faults, burnt smell, speed control
+              issues. All brands.
             </p>
-            <span class="svc-arrow">→</span>
+            <span class="svc-tag tag-home">Home</span>
           </a>
           <a href="#" class="svc-card">
-            <!-- <div class="svc-icon-box">👶</div> -->
-            <h3>Baby Incubators</h3>
+            <!-- <span class="svc-icon">👕</span> -->
+            <h3>Iron Box Repair</h3>
             <p>
-              Temperature control, humidity sensors, and electrical safety
-              calibration.
+              Not heating, steam not working, thermostat faults, cord issues.
+              All types repaired.
             </p>
-            <span class="svc-arrow">→</span>
+            <span class="svc-tag tag-home">Home</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🍽️</span> -->
+            <h3>Dishwasher Repair</h3>
+            <p>
+              Not draining, not cleaning, door latch faults, water inlet issues.
+            </p>
+            <span class="svc-tag tag-home">Home</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🌡️</span> -->
+            <h3>Water Heater / Geyser Repair</h3>
+            <p>
+              No hot water, thermostat faults, heating element failure, leaking
+              tank.
+            </p>
+            <span class="svc-tag tag-home">Home</span>
           </a>
         </div>
 
         <div class="call-box">
           <div>
-            <strong>Need a Technician?</strong>
-            <span>Available 24/7 across Nairobi and suburbs.</span>
+            <strong>Home appliance not working?</strong>
+            <span
+              >We carry spare parts on every call — same-day repair available
+              across Nairobi.</span
+            >
           </div>
-          <a href="tel:0742245720">Call 0742 245720</a>
+          <a href="tel:0742245720">📞 0742 245720</a>
+        </div>
+
+        <!-- ══ AIR CONDITIONING ══ -->
+        <div class="cat-heading">
+          <!-- <span class="cat-icon">❄️</span> -->
+          <h2>Air Conditioning Services</h2>
+          <span class="cat-badge">HVAC</span>
+        </div>
+
+        <div class="services-grid">
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">❄️</span> -->
+            <h3>AC Installation</h3>
+            <p>
+              Split units, cassette ACs, window units. Professional installation
+              for homes &amp; offices.
+            </p>
+            <span class="svc-tag tag-hvac">HVAC</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🔧</span> -->
+            <h3>AC Repair</h3>
+            <p>
+              Not cooling, not heating, leaking water, noisy operation, remote
+              control faults.
+            </p>
+            <span class="svc-tag tag-hvac">HVAC</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🧹</span> -->
+            <h3>AC Servicing &amp; Cleaning</h3>
+            <p>
+              Deep cleaning, filter replacement, gas recharge, condenser coil
+              cleaning.
+            </p>
+            <span class="svc-tag tag-hvac">HVAC</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">📋</span> -->
+            <h3>AC Maintenance Contracts</h3>
+            <p>
+              Scheduled servicing for offices, hotels, schools &amp; hospitals
+              across Nairobi.
+            </p>
+            <span class="svc-tag tag-hvac">HVAC</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🏭</span> -->
+            <h3>Commercial AC Repair</h3>
+            <p>
+              Central AC, VRF systems, commercial split units for large
+              buildings.
+            </p>
+            <span class="svc-tag tag-hvac">HVAC</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">💨</span> -->
+            <h3>Gas Recharge (Regassing)</h3>
+            <p>
+              Refrigerant top-up for ACs and refrigerators that have lost
+              cooling capacity.
+            </p>
+            <span class="svc-tag tag-hvac">HVAC</span>
+          </a>
+        </div>
+
+        <!-- ══ IT & COMPUTERS ══ -->
+        <div class="cat-heading">
+          <!-- <span class="cat-icon">💻</span> -->
+          <h2>Computers &amp; IT Equipment</h2>
+          <span class="cat-badge">IT</span>
+        </div>
+
+        <div class="services-grid">
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">📷</span> -->
+            <h3>Software Solutions &amp; Web</h3>
+            <p>
+              Custom software development, website design, IT consultancy for
+              businesses across Nairobi.
+            </p>
+            <span class="svc-tag tag-it">IT</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">💻</span> -->
+            <h3>Laptop Repair</h3>
+            <p>
+              Screen replacement, motherboard faults, overheating, keyboard,
+              charging issues. All brands.
+            </p>
+            <span class="svc-tag tag-it">IT</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🖥️</span> -->
+            <h3>Desktop Computer Repair</h3>
+            <p>
+              Power supply faults, RAM issues, hard drive failure, virus
+              removal, slow performance.
+            </p>
+            <span class="svc-tag tag-it">IT</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🖨️</span> -->
+            <h3>Printer Repair</h3>
+            <p>
+              Paper jams, not printing, ink head cleaning, roller replacement.
+              All makes serviced.
+            </p>
+            <span class="svc-tag tag-it">IT</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🌐</span> -->
+            <h3>Network &amp; WiFi Setup</h3>
+            <p>
+              Router configuration, LAN installation, network troubleshooting
+              for homes &amp; offices.
+            </p>
+            <span class="svc-tag tag-it">IT</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">📷</span> -->
+            <h3>CCTV Installation &amp; Repair</h3>
+            <p>
+              Security camera installation, DVR/NVR setup, camera repair across
+              Nairobi.
+            </p>
+            <span class="svc-tag tag-it">IT</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">💾</span> -->
+            <h3>Data Recovery</h3>
+            <p>
+              Recover lost data from hard drives, flash disks, and formatted
+              storage devices.
+            </p>
+            <span class="svc-tag tag-it">IT</span>
+          </a>
+        </div>
+
+        <div class="call-box">
+          <div>
+            <strong>Computer or network problem?</strong>
+            <span>On-site IT support available same day across Nairobi.</span>
+          </div>
+          <a href="tel:0742245720">📞 0742 245720</a>
+        </div>
+
+        <!-- ══ MEDICAL EQUIPMENT ══ -->
+        <div class="cat-heading">
+          <!-- <span class="cat-icon">🏥</span> -->
+          <h2>Medical &amp; Hospital Equipment Repair</h2>
+          <span class="cat-badge">Medical</span>
+        </div>
+
+        <p
+          style="color: var(--muted); font-size: 0.93rem; margin-bottom: 1.5rem"
+        >
+          We specialise in the repair and maintenance of clinical and hospital
+          equipment across Nairobi. Our medical engineering team services
+          clinics, hospitals, physiotherapy centres, and dental practices.
+        </p>
+
+        <div class="services-grid">
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🦷</span> -->
+            <h3>Dental Chair Repair</h3>
+            <p>
+              Hydraulic faults, motor issues, light failures, water system
+              problems. All brands.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🫁</span> -->
+            <h3>Oxygen Concentrator Repair</h3>
+            <p>
+              Low oxygen output, alarm faults, compressor issues, flow meter
+              problems.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">👶</span> -->
+            <h3>Baby Incubator Repair</h3>
+            <p>
+              Temperature control faults, humidity sensor issues, alarm systems,
+              heating element repair.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">💆</span> -->
+            <h3>Massage Chair Repair</h3>
+            <p>
+              Motor faults, massage mechanism, remote control, heating element,
+              recliner issues.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">❤️</span> -->
+            <h3>Patient Monitor Repair</h3>
+            <p>
+              ECG faults, display issues, sensor calibration, battery
+              replacement, alarm faults.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">💉</span> -->
+            <h3>Infusion Pump Repair</h3>
+            <p>
+              Motor faults, alarm errors, calibration, sensor and control board
+              repair.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🔬</span> -->
+            <h3>Laboratory Equipment</h3>
+            <p>
+              Centrifuges, autoclaves, microscopes, lab fridges. Repair and
+              calibration services.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🩺</span> -->
+            <h3>Ultrasound Machine Repair</h3>
+            <p>
+              Probe faults, display issues, image quality problems, transducer
+              repair.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🛏️</span> -->
+            <h3>Hospital Bed Repair</h3>
+            <p>
+              Electric bed motors, hydraulic faults, control panel, side rail
+              issues.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🌡️</span> -->
+            <h3>Sterilizer / Autoclave Repair</h3>
+            <p>
+              Pressure faults, heating element, door seal, timer and cycle
+              control issues.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🫀</span> -->
+            <h3>ECG Machine Repair</h3>
+            <p>
+              Lead faults, printing issues, calibration, display and battery
+              problems.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+          <a href="#" class="svc-card">
+            <!-- <span class="svc-icon">🔧</span> -->
+            <h3>Other Medical Equipment</h3>
+            <p>
+              Physiotherapy equipment, nebulizers, suction machines, and any
+              other clinical devices.
+            </p>
+            <span class="svc-tag tag-med">Medical</span>
+          </a>
+        </div>
+
+        <div class="call-box">
+          <div>
+            <strong>Medical equipment fault?</strong>
+            <span
+              >Our medical engineering team is available 24 hours for urgent
+              hospital repairs.</span
+            >
+          </div>
+          <a href="tel:0742245720">📞 0742 245720</a>
+        </div>
+
+        <!-- WHY US -->
+        <!-- <section class="sec" style="margin-top: 1rem"> -->
+        <!-- <div class="sec-label"><h2>Why Choose Us</h2></div> -->
+        <section class="sec" style="margin-top: 4rem">
+          <h2
+            style="
+              font-family: var(--font-display);
+              font-size: 1.8rem;
+              font-weight: 800;
+              color: var(--navy);
+              margin-bottom: 1.5rem;
+              text-transform: uppercase;
+            "
+          >
+            Why Nairobi Chooses Quelle Technologies
+          </h2>
+          <div class="why-grid">
+            <div class="why-item">
+              <div>
+                <strong>Open 24 Hours, 7 Days</strong
+                ><span>Call any time — day or night, weekday or weekend.</span>
+              </div>
+            </div>
+            <div class="why-item">
+              <div>
+                <strong>Parts on Every Call</strong
+                ><span
+                  >We carry the most common spare parts on every visit — fewer
+                  return trips.</span
+                >
+              </div>
+            </div>
+            <div class="why-item">
+              <div>
+                <strong>Honest Pricing</strong
+                ><span
+                  >Clear quote before we start. No hidden charges, ever.</span
+                >
+              </div>
+            </div>
+            <div class="why-item">
+              <div>
+                <strong>4.9 / 5 on Google</strong
+                ><span>Verified reviews from real clients across Nairobi.</span>
+              </div>
+            </div>
+            <div class="why-item">
+              <div>
+                <strong>Medical Engineering Team</strong
+                ><span
+                  >Certified technicians for clinical and hospital
+                  equipment.</span
+                >
+              </div>
+            </div>
+            <div class="why-item">
+              <div>
+                <strong>Maintenance Contracts</strong
+                ><span
+                  >Monthly &amp; quarterly plans for offices, hotels, clinics,
+                  and schools.</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="sec" style="margin-top: 4rem">
+          <div class="sec-label">FAQ</div>
+          <h2
+            style="
+              font-family: var(--font-display);
+              font-size: 1.8rem;
+              font-weight: 800;
+              color: var(--navy);
+              margin-bottom: 1.5rem;
+              text-transform: uppercase;
+            "
+          >
+            Frequently Asked Questions
+          </h2>
+          <div class="faq-list">
+            <div class="faq">
+              <div class="faq-q">
+                What appliances do you repair in Nairobi?
+                <span class="chev">▼</span>
+              </div>
+              <div class="faq-a">
+                <p>
+                  Water dispensers, refrigerators, washing machines, microwaves,
+                  cookers, blenders, iron boxes, air conditioners, laptops,
+                  desktops, dental chairs, oxygen concentrators, baby
+                  incubators, massage chairs, patient monitors, and all other
+                  medical equipment.
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="faq-q">
+                Do you repair medical equipment in Nairobi?
+                <span class="chev">▼</span>
+              </div>
+              <div class="faq-a">
+                <p>
+                  Yes. We have a dedicated medical engineering team for clinical
+                  and hospital equipment — dental chairs, oxygen concentrators,
+                  baby incubators, patient monitors, ECG machines, autoclaves,
+                  lab equipment, and more.
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="faq-q">
+                Are you available 24 hours?
+                <span class="chev">▼</span>
+              </div>
+              <div class="faq-a">
+                <p>
+                  Yes. Quelle Technologies Limited is open 24 hours, 7 days a
+                  week across Nairobi and nearby areas. You can call us any time
+                  for emergency repairs.
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="faq-q">
+                Do you offer a warranty on repairs?
+                <span class="chev">▼</span>
+              </div>
+              <div class="faq-a">
+                <p>
+                  Yes, we provide a warranty on all our repairs and genuine
+                  spare parts used. The duration depends on the type of repair
+                  performed.
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <div class="faq-q">
+                How soon can a technician arrive?
+                <span class="chev">▼</span>
+              </div>
+              <div class="faq-a">
+                <p>
+                  We offer same-day service across Nairobi. In most cases, a
+                  technician can be at your location within 1 to 3 hours of your
+                  call.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="footer-cta">
+          <h2>Need a Repair Today?</h2>
+          <p>
+            Available 24 hours. All appliances. All brands. Nairobi &amp; nearby
+            areas.
+          </p>
+          <div class="footer-cta-btns">
+            <a href="tel:0742245720" class="btn-call">📞 0742 245720</a>
+            <a href="https://wa.me/254742245720" class="btn-ghost-l"
+              >💬 WhatsApp</a
+            >
+          </div>
         </div>
       </main>
 
+      <!-- SIDEBAR -->
       <aside>
         <div class="cta-card">
-          <h3>Quick Booking</h3>
-          <p>Request a technician to visit your location today.</p>
+          <h3>Book a Repair</h3>
+          <p>Available 24 hours. Nairobi &amp; nearby areas.</p>
           <a href="tel:0742245720" class="cta-phone">0742 245720</a>
-          <a href="https://wa.me/254742245720" class="cta-btn cta-btn-o"
-            >WhatsApp Us</a
+          <a href="tel:0742245720" class="cta-btn cta-btn-o">📞 Call Now</a>
+          <a href="https://wa.me/254742245720" class="cta-btn cta-btn-g"
+            >💬 WhatsApp Us</a
           >
-          <a href="index.html#contact-form" class="cta-btn cta-btn-g"
-            >Book Online</a
-          >
+          <div class="open-tag">
+            <div class="odot"></div>
+            Open now — 24 hours / 7 days
+          </div>
+        </div>
+
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <strong>4.9 / 5</strong>
+          <span>20 Google Reviews</span>
         </div>
 
         <div class="side-nav">
-          <h4>Our Core Services</h4>
+          <h2>Service Categories</h2>
           <ul class="ulstyle">
             <li>
-              <a href="index.html#services" class="btn-ghost-l"
-                >Appliance Repair <span class="arr">→</span></a
+              <a
+                href="#"
+                onclick="
+                  document.querySelector('.cat-heading').scrollIntoView()
+                "
+                class="btn-ghost-l"
+                >Home Appliances <span class="arr">→</span></a
               >
             </li>
             <li>
-              <a href="index.html#services" class="btn-ghost-l"
-                >IT Solutions <span class="arr">→</span></a
+              <a href="#" class="btn-ghost-l"
+                >Air Conditioning <span class="arr">→</span></a
               >
             </li>
             <li>
-              <a href="index.html#services" class="btn-ghost-l"
-                >Medical Engineering <span class="arr">→</span></a
+              <a href="#" class="btn-ghost-l"
+                >Computers &amp; IT <span class="arr">→</span></a
               >
             </li>
             <li>
-              <a href="index.html#services" class="btn-ghost-l"
-                >Digital Marketing <span class="arr">→</span></a
+              <a href="#" class="btn-ghost-l"
+                >Medical Equipment <span class="arr">→</span></a
               >
+            </li>
+          </ul>
+        </div>
+
+        <div class="side-nav">
+          <h2>Areas We Serve</h2>
+          <ul class="ulstyle">
+            <li>
+              <a href="#" class="btn-ghost-l"
+                >Westlands <span class="arr"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="btn-ghost-l"
+                >Kilimani &amp; Lavington <span class="arr"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="btn-ghost-l"
+                >Karen &amp; Langata <span class="arr"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="btn-ghost-l"
+                >Eastleigh &amp; Umoja <span class="arr"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="btn-ghost-l"
+                >Kasarani &amp; Thika Road <span class="arr"></span
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="btn-ghost-l"
+                >South B, South C &amp; Nearby <span class="arr"></span
+              ></a>
             </li>
           </ul>
         </div>
       </aside>
     </div>
 
-    <!-- FOOTER -->
+    <!-- <footer>
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <strong>Quelle Technologies Limited</strong>
+          <p>
+            Appliance repair, IT solutions, digital marketing &amp; medical
+            engineering in Nairobi, Kenya.
+          </p>
+        </div>
+        <div class="fc">
+          <h5>Home Repairs</h5>
+          <ul>
+            <li>
+              <a href="water-dispenser-repair-nairobi.html"
+                >Water Dispenser Repair</a
+              >
+            </li>
+            <li><a href="#">Refrigerator Repair</a></li>
+            <li><a href="#">Washing Machine</a></li>
+            <li><a href="#">Microwave Repair</a></li>
+            <li><a href="#">Cooker &amp; Oven</a></li>
+          </ul>
+        </div>
+        <div class="fc">
+          <h5>Medical &amp; IT</h5>
+          <ul>
+            <li><a href="#">Dental Chair Repair</a></li>
+            <li><a href="#">Oxygen Concentrator</a></li>
+            <li><a href="#">Baby Incubator</a></li>
+            <li><a href="#">Laptop &amp; Desktop</a></li>
+            <li><a href="#">Air Conditioning</a></li>
+          </ul>
+        </div>
+        <div class="fc">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="tel:0742245720">📞 0742 245720</a></li>
+            <li><a href="https://wa.me/254742245720">💬 WhatsApp</a></li>
+            <li>
+              <a href="https://instagram.com/quelletechnologiesltd"
+                >📸 @quelletechnologiesltd</a
+              >
+            </li>
+            <li><a href="#">📍 Nairobi, Kenya</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Quelle Technologies Limited</span>
+        <span>© 2025 Quelle Technologies Limited. All rights reserved.</span>
+      </div>
+    </footer> -->
     <footer>
       <div class="footer-top">
         <div class="footer-brand">
@@ -665,13 +1346,33 @@
         </span>
       </div>
     </footer>
+
     <script>
+      // Navigation scroll effect
       const nav = document.getElementById("mainNav");
       function updateNav() {
         nav.classList.toggle("scrolled", window.scrollY > 40);
       }
       window.addEventListener("scroll", updateNav, { passive: true });
       updateNav();
+
+      // Improved FAQ Toggle
+      document.querySelectorAll(".faq-q").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faq = question.parentElement;
+          const isActive = faq.classList.contains("active");
+
+          // Close all other FAQs
+          document.querySelectorAll(".faq").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Toggle current FAQ
+          if (!isActive) {
+            faq.classList.add("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>
